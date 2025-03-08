@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #3c7aec;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-shadow: 0 0 5px black;
+}
+
+.container ,
+.alarmList {
+    box-shadow: 10px 10px 10px #0000006c,inset 5px 5px 20px #13131324,inset -5px -5px 20px #1313133c;
+    height: 600px;
+    width: 500px;
+    border-radius: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.clock {
+    box-shadow: 0 0 20px 5px #30559ab1;
+    color: white;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 30px;    
+    position: relative;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--r)));
+    inset: 7px;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--r)));
+    display: inline-block;
+    font-size: 18px;
+}
+.clock .center {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);  
+    box-shadow: inset 0 0 5px black;
+    z-index: 5; 
+}
+.clock .hand{
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+.clock .hand.hour{
+    height: 40px;
+    width: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.clock .hand.min{
+    height: 50px;
+    width: 3.5px;
+    background: rgb(17, 0, 255);
+    border-radius: 5px;
+}
+.clock .hand.sec{
+    height: 60px;
+    width: 2px;
+    background: rgb(94, 255, 0);
+    border-radius: 5px;
+}
+.currentTime , .alarm {
+    height: 70px;
+    width: 350px;
+    display: flex;
+}
+
+.currentTime {
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    justify-content: center;
+    color: white;
+}
+
+.alarm {
+    justify-content: space-between;
+}
+
+.alarm select {
+    cursor: pointer;
+    height: 70%;
+    width: 80px;
+    border-radius: 0.5rem;
+    padding: 2px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    text-shadow: 0 0 5px black;
+    background: transparent;
+    box-shadow: inset 0 0 5px #000000ae;
+}
+.alarm select option{
+    background: #3c7aec;
+}
+.setAlarm {
+    cursor: pointer;
+    height: 50px;
+    width: 350px;
+    margin-top: 30px;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: transparent;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.441),5px 5px 10px rgba(0, 0, 0, 0.364);
+}
+
+#alarmContainer {
+    height: 90%;
+    width: 90%;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.alarmList h2 {
+    color: white;
+}
+#alarmContainer div {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.404),
+    inset 1px 1px 5px rgba(0, 0, 0, 0.258);
+    display: flex;
+    height: 60px;
+    width: 90%;
+    color: white;
+    margin: 10px auto; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.55rem;
+}

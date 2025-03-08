@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>clock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <span style="--r:1"><b>1</b></span>
+            <span style="--r:2"><b>2</b></span>
+            <span style="--r:3"><b>3</b></span>
+            <span style="--r:4"><b>4</b></span>
+            <span style="--r:5"><b>5</b></span>
+            <span style="--r:6"><b>6</b></span>
+            <span style="--r:7"><b>7</b></span>
+            <span style="--r:8"><b>8</b></span>
+            <span style="--r:9"><b>9</b></span>
+            <span style="--r:10"><b>10</b></span>
+            <span style="--r:11"><b>11</b></span>
+            <span style="--r:12"><b>12</b></span>
+            <div class="hand hour"></div>
+            <div class="hand min"></div>
+            <div class="hand sec"></div>
+            <div class="center"></div>
+        </div>
+        <div class="currentTime">00 : 00 : 00 </div>
+        <div class="alarm">
+            <select id="">
+                <option value="hour" disabled selected>hour</option>
+            </select>
+            <select name="" id="">
+                <option value="min" disabled selected>min</option>
+            </select>
+            <select name="" id="">
+                <option value="sec"disabled selected >sec</option>
+            </select>
+            <select name="" id="">
+                <option value="amPM" disabled selected>amPM</option>
+            </select>
+        </div>
+        <button class="setAlarm">Set Alarm</button>
+    </div>
+    
+    <div class="alarmList">
+       <h2>Alarm List</h2>
+       <hr style="width: 90%;margin-top: 2px;">
+       <div id="alarmContainer">
+        
+       </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
